@@ -4,7 +4,7 @@ import android.app.Application
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import com.datanapps.network.NetworkDataAPI
+import com.datanapps.network.UserDataAPI
 import dagger.Module
 import dagger.Provides
 import okhttp3.Cache
@@ -45,8 +45,8 @@ class NetworkModule @Inject constructor(var application: Application) {
 
 
     @Provides
-    fun provideNetworkDataApi(retrofit: Retrofit): NetworkDataAPI =
-        retrofit.create(NetworkDataAPI::class.java)
+    fun provideUserDataApi(retrofit: Retrofit): UserDataAPI =
+        retrofit.create(UserDataAPI::class.java)
 
 
     /**
@@ -93,7 +93,7 @@ class NetworkModule @Inject constructor(var application: Application) {
 
         // create retrofit
         return Retrofit.Builder()
-            .baseUrl("https://data.gov.sg")
+            .baseUrl("https://datanapps.com")
             .addConverterFactory(GsonConverterFactory.create())
             .client(okHttpClient)
             .build()
