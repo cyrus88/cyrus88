@@ -4,7 +4,6 @@ import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 class User {
-
     @SerializedName("id")
     @Expose
     var id: String? = null
@@ -26,5 +25,4 @@ class User {
     @SerializedName("Image")
     @Expose
     var image: String? = null
-
 }

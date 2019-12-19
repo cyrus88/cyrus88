@@ -4,7 +4,6 @@ import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 class BaseUsers {
-
     @SerializedName("userlist")
     @Expose
     var userlist: MutableList<User>? = null
@@ -14,5 +13,4 @@ class BaseUsers {
     @SerializedName("message")
     @Expose
     var message: String? = null
-
 }
