@@ -8,14 +8,6 @@ https://datanapps.com/DNARestAPIs/getUserLists
 4. Click and show detail
 
 
-### Screens : 
-<img src="https://github.com/datanapps/BasicExample-kotlin-mvvm-DI-/blob/master/appdetail/screens/Screenshot.png" height="600" width="300">
-
-
-### APK to download : 
-https://github.com/datanapps/BasicExample-kotlin-mvvm-DI-/blob/master/appdetail/apks/debug/app-debug.apk
-
-
 #### Task ONE: Display a list of User
 User List displayed in list view.
 Each entry in the list is composite view.
