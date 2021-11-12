@@ -1,6 +1,6 @@
 # BasicExample-kotlin-mvvm-DI
 
-https://datanapps.com/DNARestAPIs/getUserLists
+https://anime-facts-rest-api.herokuapp.com/api/v1
 
 1. Calling an API (Anime API)
 2. Using dagger and MVVM
