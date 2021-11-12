@@ -1,4 +1,4 @@
-package com.datanapps.userInterface
+package com.features.home
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,14 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.datanapps.network.model.User
+import com.features.network.model.User
 import com.sph.sgnetworkdata.R
 import kotlinx.android.synthetic.main.layout_user_list.view.*
 import javax.inject.Inject
 
 
-class UserDataAdapter @Inject constructor():
-    RecyclerView.Adapter<UserDataAdapter.NetworkDataViewHolder>() {
+class AnimeAdapter @Inject constructor():
+    RecyclerView.Adapter<AnimeAdapter.NetworkDataViewHolder>() {
 
     private var networkDataList = mutableListOf<User>()
 
@@ -53,7 +53,7 @@ class UserDataAdapter @Inject constructor():
     inner class NetworkDataViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         fun bindView(user: User) {
-            itemView.tvLayoutName.text = user.firstName
+            itemView.tvLayoutName.text = user.name
 
             Glide.with(context!!).load(user.image).into(itemView.ivUserImage);
 

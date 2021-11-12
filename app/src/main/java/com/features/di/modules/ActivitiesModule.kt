@@ -1,11 +1,11 @@
-package com.datanapps.di.modules
+package com.features.di.modules
 
-import com.datanapps.userInterface.UserDataActivity
+import com.features.home.AnimeActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
 @Module
 abstract class ActivitiesModule {
     @ContributesAndroidInjector
-    abstract fun contributeMainActivity(): UserDataActivity
+    abstract fun contributeMainActivity(): AnimeActivity
 }

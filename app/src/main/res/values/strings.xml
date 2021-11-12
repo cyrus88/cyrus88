@@ -7,7 +7,7 @@
     <string name="msg_no_internet_network">No network connection</string>
     <string name="year">Year %s</string>
     <string name="data_consumption">Data consumption : %s</string>
-    <string name="user_data_detail">User Detail</string>
+    <string name="user_data_detail">Anime Details</string>
 
 
 </resources>

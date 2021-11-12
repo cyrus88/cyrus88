@@ -1,4 +1,4 @@
-package com.datanapps.userInterface
+package com.features.home
 
 import android.os.Bundle
 import android.view.View
@@ -8,20 +8,20 @@ import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.google.android.material.snackbar.Snackbar
 import com.sph.sgnetworkdata.R
-import com.datanapps.network.NetworkStatus
-import com.datanapps.network.model.BaseUsers
+import com.features.network.utils.NetworkStatus
+import com.features.network.model.BaseUsers
 import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.activity_user_data.*
 import javax.inject.Inject
 
 
-class UserDataActivity : AppCompatActivity() {
+class AnimeActivity : AppCompatActivity() {
 
     @Inject
-    lateinit var networkDataActivityViewModel: UserDataActivityViewModel
+    lateinit var networkDataActivityViewModel: AnimeActivityViewModel
 
     @Inject
-    lateinit var networkDataAdapter: UserDataAdapter
+    lateinit var networkDataAdapter: AnimeAdapter
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,9 +44,8 @@ class UserDataActivity : AppCompatActivity() {
         networkDataAdapter.onItemClick = { user ->
 
             // do something with your item
-
            val bottomSheetFragment =
-                UserDataDetailFragment(user)
+                AnimeDetailFragment(user)
             bottomSheetFragment.show(supportFragmentManager, bottomSheetFragment.tag)
         }
 

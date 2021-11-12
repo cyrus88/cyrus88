@@ -1,9 +1,9 @@
-package com.datanapps
+package com.features
 
 import android.app.Activity
 import android.app.Application
-import com.datanapps.di.components.DaggerAppComponent
-import com.datanapps.di.modules.NetworkModule
+import com.features.di.components.DaggerAppComponent
+import com.features.di.modules.NetworkModule
 
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
@@ -16,10 +16,6 @@ class MyApplication : Application(), HasActivityInjector {
     @Inject
     lateinit var activityInjector: DispatchingAndroidInjector<Activity>
 
-    override fun activityInjector(): AndroidInjector<Activity> {
-        return activityInjector
-    }
-
     override fun onCreate() {
         super.onCreate()
 
@@ -31,4 +27,10 @@ class MyApplication : Application(), HasActivityInjector {
 
 
     }
+
+    override fun activityInjector(): AndroidInjector<Activity> {
+        return activityInjector
+    }
+
+
 }

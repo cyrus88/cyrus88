@@ -1,9 +1,9 @@
-package com.datanapps.di.components
+package com.features.di.components
 
 
-import com.datanapps.MyApplication
-import com.datanapps.di.modules.ActivitiesModule
-import com.datanapps.di.modules.NetworkModule
+import com.features.MyApplication
+import com.features.di.modules.ActivitiesModule
+import com.features.di.modules.NetworkModule
 import dagger.Component
 
 @Component(

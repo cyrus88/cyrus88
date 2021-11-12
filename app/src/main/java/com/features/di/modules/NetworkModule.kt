@@ -1,10 +1,10 @@
-package com.datanapps.di.modules
+package com.features.di.modules
 
 import android.app.Application
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import com.datanapps.network.UserDataAPI
+import com.features.network.services.UserDataAPI
 import dagger.Module
 import dagger.Provides
 import okhttp3.Cache
@@ -32,7 +32,7 @@ class NetworkModule @Inject constructor(var application: Application) {
     }
 
 
-    val isConnected : Boolean    get(){
+    val isConnected : Boolean get(){
         val connectivityManager = application.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         return if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
             val network = connectivityManager.activeNetwork
@@ -93,7 +93,7 @@ class NetworkModule @Inject constructor(var application: Application) {
 
         // create retrofit
         return Retrofit.Builder()
-            .baseUrl("https://datanapps.com")
+            .baseUrl("https://anime-facts-rest-api.herokuapp.com/api/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(okHttpClient)
             .build()

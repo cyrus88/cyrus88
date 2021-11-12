@@ -1,4 +1,4 @@
-package com.datanapps.network
+package com.features.network.utils
 
 
 // network status for API

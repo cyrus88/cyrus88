@@ -1,17 +1,17 @@
-package com.datanapps.userInterface
+package com.features.home
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.datanapps.di.modules.NetworkModule
-import com.datanapps.network.NetworkStatus
-import com.datanapps.network.model.BaseUsers
+import com.features.di.modules.NetworkModule
+import com.features.network.utils.NetworkStatus
+import com.features.network.model.BaseUsers
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import javax.inject.Inject
 
 
-class UserDataActivityViewModel @Inject constructor() : ViewModel() {
+class AnimeActivityViewModel @Inject constructor() : ViewModel() {
 
     @Inject
     lateinit var networkModule: NetworkModule
